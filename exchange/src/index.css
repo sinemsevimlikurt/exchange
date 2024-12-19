@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("image/DALLE_2024-12-18_20.21.17_-_A_sophisticated_modern_and_visually_appealing_background_image_with_a_stock_market-inspired_theme_for_a_currency_exchange_calculator_webpage._The_de.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.blur-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px); 
+  z-index: 1; 
+}
+
+
+.loading-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 2vw;
+  width: 100%;
+  line-height: 100px;
+  text-align: center;
+  z-index: 2; 
+}
+
+.loading-text span {
+  text-shadow: 2px 2px rgb(62, 60, 60);
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 5px;
+  color: rgba(203, 10, 49, 0.433);
+  font-family: "BioRhyme", Arial, Helvetica, sans-serif;
+  animation: blur-text 1s infinite linear alternate;
+}
+
+@keyframes blur-text {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(4px);
+  }
+}
+
+.container {
+  z-index: 3; /* .container'ın üstte olması için z-index değerini artırdık */
+  width: 100%;
+  height: 200px;
+  position: relative; /* container için konumlandırma yapılmalı */
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  gap: 35px;
+  row-gap: 60px;
+}
+.app-area{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.select{
+  margin: 10px;
+  background-color: rgba(255, 250, 250, 0.318);
+  color: rgb(107, 105, 105);
+  border: outset rgb(226, 221, 221);
+  border-radius: 5px;
+  font-family: "BioRhyme", sans-serif;
+  text-shadow: 0.5px 0.5px black;
+}
+.input {
+  background-color: rgba(255, 250, 250, 0.252);
+  border: inset;
+  font-size: medium;
+  font-weight: 550;
+  padding: 10px;
+  width: 160px;
+  border-radius: 4px;
+  box-shadow: 2px 2px rgba(208, 202, 202, 0.652);
+}
+.arrow {
+font-size: 30px;
+color: azure;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
